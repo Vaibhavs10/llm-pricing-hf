@@ -8,7 +8,9 @@ from .scrapers import (  # noqa: F401
     groq,
     hyperbolic,
     nebius,
+    nscale,
     novita,
     publicai,
+    sambanova,
     together,
 )
