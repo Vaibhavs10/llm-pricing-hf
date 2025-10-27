@@ -37,6 +37,27 @@ python3 scripts/scrape_all.py --upload
 
 Use `--repo-id` and `--commit-message` to override the defaults if needed.
 
+### Scheduled automation with Hugging Face Jobs
+
+You can schedule daily refreshes directly from the Hugging Face Hub CLI (`hf`). The command below follows the [Jobs guide](https://huggingface.co/docs/huggingface_hub/en/guides/jobs) and assumes you have logged in with `hf auth login`:
+
+```bash
+hf jobs scheduled run "0 8 * * *" python:3.11 \
+  --secrets HF_TOKEN=${HF_TOKEN:?set HF_TOKEN} \
+  --flavor cpu-basic \
+  bash -lc "
+    git clone https://huggingface.co/Vaibhavs10/llm-pricing-hf repo &&
+    cd repo &&
+    pip install -e . &&
+    python scripts/scrape_all.py --upload
+  "
+```
+
+Notes:
+
+- The `HF_TOKEN` environment variable must be exported locally before running the command; the CLI forwards it as a secret so the scheduled job can clone/push. Make sure the token has write access to both `Vaibhavs10/llm-pricing-hf` and `reach-vb/inference-provider-pricing`.
+- The cron expression is interpreted in UTC; adjust it if you want a different schedule.
+
 The script instantiates every registered provider scraper and aggregates their `ModelPricing` results into a single JSON list. Each record contains:
 
 - `provider` – provider slug from Hugging Face
