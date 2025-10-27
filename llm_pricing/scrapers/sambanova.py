@@ -39,10 +39,16 @@ class SambaNovaScraper(ProviderScraper):
                     f"audio billed at ${duration_price:.2f} per hour input duration"
                 )
 
+            canonical_name = self.canonicalize_model_name(model_name)
+            if not canonical_name:
+                continue
+            if canonical_name != model_name:
+                notes.append(f"original label: {model_name}")
+
             results.append(
                 ModelPricing(
                     provider=self.provider_name,
-                    model=model_name,
+                    model=canonical_name,
                     input_price_per_million=input_price,
                     output_price_per_million=output_price,
                     currency=self.currency,

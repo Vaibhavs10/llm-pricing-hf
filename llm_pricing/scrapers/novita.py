@@ -28,12 +28,15 @@ class NovitaScraper(ProviderScraper):
                 if len(cells) < 4:
                     continue
                 model_name = cells[0]
+                canonical_name = self.canonicalize_model_name(model_name)
+                if not canonical_name:
+                    continue
                 input_price = self.normalize_price(cells[2])
                 output_price = self.normalize_price(cells[3])
                 results.append(
                     ModelPricing(
                         provider=self.provider_name,
-                        model=model_name,
+                        model=canonical_name,
                         input_price_per_million=input_price,
                         output_price_per_million=output_price,
                         currency=self.currency,

@@ -32,13 +32,16 @@ class GroqScraper(ProviderScraper):
                 cells = [td.get_text(" ", strip=True) for td in row.find_all("td")]
                 if len(cells) < 4:
                     continue
-                model_name = cells[0]
+                model_name = cells[0].replace("AI Model", "").strip()
+                canonical_name = self.canonicalize_model_name(model_name)
+                if not canonical_name:
+                    continue
                 input_value = VALUE_PATTERN.search(cells[2])
                 output_value = VALUE_PATTERN.search(cells[3])
                 results.append(
                     ModelPricing(
                         provider=self.provider_name,
-                        model=model_name.replace("AI Model", "").strip(),
+                        model=canonical_name,
                         input_price_per_million=float(input_value.group(1)) if input_value else None,
                         output_price_per_million=float(output_value.group(1)) if output_value else None,
                         currency=self.currency,

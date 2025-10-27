@@ -36,6 +36,10 @@ class FireworksScraper(ProviderScraper):
             model_name = cells[0].get_text(" ", strip=True)
             price_text = cells[1].get_text(" ", strip=True)
 
+            canonical_name = self.canonicalize_model_name(model_name)
+            if not canonical_name:
+                continue
+
             input_price = None
             output_price = None
             match = INPUT_OUTPUT_PATTERN.search(price_text)
@@ -52,7 +56,7 @@ class FireworksScraper(ProviderScraper):
             results.append(
                 ModelPricing(
                     provider=self.provider_name,
-                    model=model_name,
+                    model=canonical_name,
                     input_price_per_million=input_price,
                     output_price_per_million=output_price,
                     currency=self.currency,

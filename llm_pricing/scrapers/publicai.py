@@ -32,19 +32,25 @@ class PublicAIScraper(ProviderScraper):
                 if not model_name:
                     continue
                 quantization = cells[1]
+                canonical_name = self.canonicalize_model_name(model_name)
+                if not canonical_name:
+                    continue
                 input_price = self.normalize_price(cells[2])
                 output_price = self.normalize_price(cells[3])
                 last_model = model_name
-                label = f"{model_name} [{quantization}]" if quantization else model_name
+                notes = None
+                if quantization:
+                    notes = f"quantization: {quantization}"
                 results.append(
                     ModelPricing(
                         provider=self.provider_name,
-                        model=label,
+                        model=canonical_name,
                         input_price_per_million=input_price,
                         output_price_per_million=output_price,
                         currency=self.currency,
                         unit=self.unit,
                         source_url=self.source_url,
+                        notes=notes,
                     )
                 )
         return results

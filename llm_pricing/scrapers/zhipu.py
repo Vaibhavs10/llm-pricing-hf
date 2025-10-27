@@ -51,6 +51,9 @@ class ZhipuScraper(ProviderScraper):
             if pricing is None:
                 # Skip models with no publicly documented pricing.
                 continue
+            canonical_name = self.canonicalize_model_name(hf_name)
+            if not canonical_name:
+                continue
             input_price, output_price = pricing
             notes = None
             if doc_name != hf_name.split("/", 1)[-1]:
@@ -58,7 +61,7 @@ class ZhipuScraper(ProviderScraper):
             results.append(
                 ModelPricing(
                     provider=self.provider_name,
-                    model=hf_name,
+                    model=canonical_name,
                     input_price_per_million=input_price,
                     output_price_per_million=output_price,
                     currency=self.currency,

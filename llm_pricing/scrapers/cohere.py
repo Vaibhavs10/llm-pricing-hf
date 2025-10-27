@@ -49,6 +49,9 @@ class CohereScraper(ProviderScraper):
         for group in pricing_groups:
             for model in group.get("models", []):
                 model_name = model.get("modelName") or model.get("title") or model.get("description", "").split(".")[0]
+                canonical_name = self.canonicalize_model_name(model_name.strip())
+                if not canonical_name:
+                    continue
                 for pricing in model.get("pricings", []):
                     per = pricing.get("overridePer") or model.get("per") or ""
                     price_unit = per or self.unit
@@ -61,7 +64,7 @@ class CohereScraper(ProviderScraper):
                     results.append(
                         ModelPricing(
                             provider=self.provider_name,
-                            model=model_name.strip(),
+                            model=canonical_name,
                             input_price_per_million=input_price if isinstance(input_price, (int, float)) else None,
                             output_price_per_million=output_price if isinstance(output_price, (int, float)) else None,
                             currency=self.currency,

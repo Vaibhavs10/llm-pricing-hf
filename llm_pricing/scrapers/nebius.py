@@ -50,19 +50,26 @@ class NebiusScraper(ProviderScraper):
                     if not last_model:
                         continue
                     model_label = f"{last_model} ({flavor})" if flavor else last_model
+                    canonical_name = self.canonicalize_model_name(model_label)
+                    if not canonical_name:
+                        continue
                     input_price = self.normalize_price(input_value)
                     output_price = self.normalize_price(output_value)
                     if input_price is None and output_price is None:
                         continue
+                    notes = None
+                    if canonical_name != model_label:
+                        notes = f"variant: {model_label}"
                     results.append(
                         ModelPricing(
                             provider=self.provider_name,
-                            model=model_label,
+                            model=canonical_name,
                             input_price_per_million=input_price,
                             output_price_per_million=output_price,
                             currency=self.currency,
                             unit=self.unit,
                             source_url=self.source_url,
+                            notes=notes,
                         )
                     )
         return results

@@ -22,6 +22,9 @@ class HyperbolicScraper(ProviderScraper):
             if not name_elem or not price_elem:
                 continue
             model_name = name_elem.get_text(strip=True)
+            canonical_name = self.canonicalize_model_name(model_name)
+            if not canonical_name:
+                continue
             price_text = price_elem.get_text(strip=True)
             input_price = output_price = None
             if " / " in price_text:
@@ -39,7 +42,7 @@ class HyperbolicScraper(ProviderScraper):
             results.append(
                 ModelPricing(
                     provider=self.provider_name,
-                    model=model_name,
+                    model=canonical_name,
                     input_price_per_million=input_price,
                     output_price_per_million=output_price,
                     currency=self.currency,

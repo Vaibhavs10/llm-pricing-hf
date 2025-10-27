@@ -7,6 +7,8 @@ from typing import Iterable, Optional, Sequence
 import requests
 from tenacity import retry, stop_after_attempt, wait_exponential
 
+from ..utils import canonicalize_model_name
+
 
 DEFAULT_TIMEOUT = 30
 
@@ -62,6 +64,9 @@ class ProviderScraper(abc.ABC):
             return float(digits)
         except ValueError:
             return None
+
+    def canonicalize_model_name(self, model_name: str) -> Optional[str]:
+        return canonicalize_model_name(self.provider_name, model_name)
 
 
 def flatten(pricing_groups: Iterable[Iterable[ModelPricing]]) -> list[ModelPricing]:
