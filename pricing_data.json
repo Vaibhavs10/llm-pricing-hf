@@ -1,5 +1,85 @@
 [
   {
+    "provider": "cerebras",
+    "model": "openai/gpt-oss-120b",
+    "input_price_per_million": 0.35,
+    "output_price_per_million": 0.75,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.cerebras.ai/pricing",
+    "notes": "speed: ~3000 tokens/s; original label: GPT OSS 120B"
+  },
+  {
+    "provider": "cerebras",
+    "model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+    "input_price_per_million": 0.65,
+    "output_price_per_million": 0.85,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.cerebras.ai/pricing",
+    "notes": "speed: ~2600 tokens/s; ** Models have been scheduled for deprecation as part of ongoing efforts to serve the most up-to-date models.; original label: Llama 4 Scout**"
+  },
+  {
+    "provider": "cerebras",
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "input_price_per_million": 0.1,
+    "output_price_per_million": 0.1,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.cerebras.ai/pricing",
+    "notes": "speed: ~2200 tokens/s; original label: Llama 3.1 8B"
+  },
+  {
+    "provider": "cerebras",
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
+    "input_price_per_million": 0.85,
+    "output_price_per_million": 1.2,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.cerebras.ai/pricing",
+    "notes": "speed: ~2100 tokens/s; original label: Llama 3.3 70B"
+  },
+  {
+    "provider": "cerebras",
+    "model": "Qwen/Qwen3-32B",
+    "input_price_per_million": 0.4,
+    "output_price_per_million": 0.8,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.cerebras.ai/pricing",
+    "notes": "speed: ~2600 tokens/s; original label: Qwen 3 32B"
+  },
+  {
+    "provider": "cerebras",
+    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "input_price_per_million": 0.6,
+    "output_price_per_million": 1.2,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.cerebras.ai/pricing",
+    "notes": "speed: ~1400 tokens/s; * Preview models are intended for evaluation purposes only, and are not intended for use in production environments. They may be discontinued at short notice.; original label: Qwen 3 235B Instruct*"
+  },
+  {
+    "provider": "cerebras",
+    "model": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "input_price_per_million": 0.6,
+    "output_price_per_million": 2.9,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.cerebras.ai/pricing",
+    "notes": "speed: ~1700 tokens/s; ** Models have been scheduled for deprecation as part of ongoing efforts to serve the most up-to-date models.; original label: Qwen 3 235B Thinking**"
+  },
+  {
+    "provider": "cerebras",
+    "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "input_price_per_million": 2.0,
+    "output_price_per_million": 2.0,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.cerebras.ai/pricing",
+    "notes": "speed: ~2000 tokens/s; ** Models have been scheduled for deprecation as part of ongoing efforts to serve the most up-to-date models.; original label: Qwen 3 480B Coder**"
+  },
+  {
     "provider": "cohere",
     "model": "CohereLabs/c4ai-command-a-03-2025",
     "input_price_per_million": 2.5,
@@ -51,7 +131,7 @@
   },
   {
     "provider": "fireworks-ai",
-    "model": "deepseek-ai/DeepSeek-V3.1",
+    "model": "deepseek-ai/DeepSeek-V3-0324",
     "input_price_per_million": 0.9,
     "output_price_per_million": 0.9,
     "currency": "USD",
@@ -61,7 +141,7 @@
   },
   {
     "provider": "fireworks-ai",
-    "model": "deepseek-ai/DeepSeek-V3-0324",
+    "model": "deepseek-ai/DeepSeek-V3.1",
     "input_price_per_million": 0.9,
     "output_price_per_million": 0.9,
     "currency": "USD",
@@ -131,16 +211,6 @@
   },
   {
     "provider": "fireworks-ai",
-    "model": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-    "input_price_per_million": 0.22,
-    "output_price_per_million": 0.22,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://fireworks.ai/pricing",
-    "notes": "tier: Qwen3 235B Family and GLM-4.5 Air"
-  },
-  {
-    "provider": "fireworks-ai",
     "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
     "input_price_per_million": 0.22,
     "output_price_per_million": 0.22,
@@ -162,6 +232,16 @@
   {
     "provider": "fireworks-ai",
     "model": "zai-org/GLM-4.5-Air",
+    "input_price_per_million": 0.22,
+    "output_price_per_million": 0.22,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://fireworks.ai/pricing",
+    "notes": "tier: Qwen3 235B Family and GLM-4.5 Air"
+  },
+  {
+    "provider": "fireworks-ai",
+    "model": "Qwen/Qwen3-235B-A22B-Thinking-2507",
     "input_price_per_million": 0.22,
     "output_price_per_million": 0.22,
     "currency": "USD",
@@ -911,7 +991,7 @@
   },
   {
     "provider": "novita",
-    "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+    "model": "Qwen/Qwen3-235B-A22B",
     "input_price_per_million": 0.3,
     "output_price_per_million": 1.5,
     "currency": "USD",
@@ -1488,6 +1568,86 @@
     "unit": "per million tokens",
     "source_url": "https://cloud.sambanova.ai/pricing",
     "notes": null
+  },
+  {
+    "provider": "scaleway",
+    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "input_price_per_million": 0.872232,
+    "output_price_per_million": 2.616696,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.scaleway.com/en/pricing/model-as-a-service/#generative-apis",
+    "notes": "task: Chat; original EUR input \u20ac0.75 / million tokens; original EUR output \u20ac2.25 / million tokens; EUR\u2192USD rate 1.162976"
+  },
+  {
+    "provider": "scaleway",
+    "model": "openai/gpt-oss-120b",
+    "input_price_per_million": 0.174446,
+    "output_price_per_million": 0.697786,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.scaleway.com/en/pricing/model-as-a-service/#generative-apis",
+    "notes": "task: Chat; original EUR input \u20ac0.15 / million tokens; original EUR output \u20ac0.60 / million tokens; EUR\u2192USD rate 1.162976"
+  },
+  {
+    "provider": "scaleway",
+    "model": "google/gemma-3-27b-it",
+    "input_price_per_million": 0.290744,
+    "output_price_per_million": 0.581488,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.scaleway.com/en/pricing/model-as-a-service/#generative-apis",
+    "notes": "task: Chat and Vision; original EUR input \u20ac0.25 / million tokens; original EUR output \u20ac0.50 / million tokens; EUR\u2192USD rate 1.162976"
+  },
+  {
+    "provider": "scaleway",
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
+    "input_price_per_million": 1.046678,
+    "output_price_per_million": 1.046678,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.scaleway.com/en/pricing/model-as-a-service/#generative-apis",
+    "notes": "task: Chat; original EUR input \u20ac0.90 / million tokens; original EUR output \u20ac0.90 / million tokens; EUR\u2192USD rate 1.162976"
+  },
+  {
+    "provider": "scaleway",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+    "input_price_per_million": 1.046678,
+    "output_price_per_million": 1.046678,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.scaleway.com/en/pricing/model-as-a-service/#generative-apis",
+    "notes": "task: Chat; original EUR input \u20ac0.90 / million tokens; original EUR output \u20ac0.90 / million tokens; EUR\u2192USD rate 1.162976"
+  },
+  {
+    "provider": "scaleway",
+    "model": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+    "input_price_per_million": 0.232595,
+    "output_price_per_million": 0.930381,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.scaleway.com/en/pricing/model-as-a-service/#generative-apis",
+    "notes": "task: Chat; original EUR input \u20ac0.20 / million tokens; original EUR output \u20ac0.80 / million tokens; EUR\u2192USD rate 1.162976"
+  },
+  {
+    "provider": "scaleway",
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "input_price_per_million": 0.232595,
+    "output_price_per_million": 0.232595,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.scaleway.com/en/pricing/model-as-a-service/#generative-apis",
+    "notes": "task: Chat; original EUR input \u20ac0.20 / million tokens; original EUR output \u20ac0.20 / million tokens; EUR\u2192USD rate 1.162976"
+  },
+  {
+    "provider": "scaleway",
+    "model": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "input_price_per_million": 1.046678,
+    "output_price_per_million": 1.046678,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://www.scaleway.com/en/pricing/model-as-a-service/#generative-apis",
+    "notes": "task: Chat; original EUR input \u20ac0.90 / million tokens; original EUR output \u20ac0.90 / million tokens; EUR\u2192USD rate 1.162976"
   },
   {
     "provider": "together",

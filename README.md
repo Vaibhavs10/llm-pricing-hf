@@ -42,20 +42,25 @@ The script instantiates every registered provider scraper and aggregates their `
 
 Scrapers are implemented for:
 
+- Cerebras
 - Cohere
 - Fireworks.ai
 - Groq
 - Hyperbolic
 - Nebius
 - Novita
+- Nscale
 - PublicAI (Inference.net)
+- SambaNova
+- Scaleway
 - Together AI
+- Zhipu (zai-org)
 
 Each scraper uses static HTML parsing or embedded JSON extraction tailored to the provider's public pricing page.
 
 ### TODO
 
-Scrapers still need to be implemented for: Cerebras, HF Inference Infrastructure, and Scaleway.
+Scrapers still need to be implemented for: Hugging Face Inference Infrastructure.
 
 ## Extending
 
