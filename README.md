@@ -29,6 +29,14 @@ Run all available scrapers and persist their output to `pricing_data.json`:
 python3 scripts/scrape_all.py
 ```
 
+To also upload the refreshed JSON to the `reach-vb/inference-provider-pricing` dataset repo on Hugging Face, provide the `--upload` flag (ensure your `HF_TOKEN` is configured locally):
+
+```bash
+python3 scripts/scrape_all.py --upload
+```
+
+Use `--repo-id` and `--commit-message` to override the defaults if needed.
+
 The script instantiates every registered provider scraper and aggregates their `ModelPricing` results into a single JSON list. Each record contains:
 
 - `provider` – provider slug from Hugging Face

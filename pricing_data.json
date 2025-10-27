@@ -121,7 +121,7 @@
   },
   {
     "provider": "fireworks-ai",
-    "model": "deepseek-ai/DeepSeek-V3",
+    "model": "deepseek-ai/DeepSeek-V3-0324",
     "input_price_per_million": 0.9,
     "output_price_per_million": 0.9,
     "currency": "USD",
@@ -131,7 +131,7 @@
   },
   {
     "provider": "fireworks-ai",
-    "model": "deepseek-ai/DeepSeek-V3-0324",
+    "model": "deepseek-ai/DeepSeek-V3",
     "input_price_per_million": 0.9,
     "output_price_per_million": 0.9,
     "currency": "USD",
@@ -211,26 +211,6 @@
   },
   {
     "provider": "fireworks-ai",
-    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
-    "input_price_per_million": 0.22,
-    "output_price_per_million": 0.22,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://fireworks.ai/pricing",
-    "notes": "tier: Qwen3 235B Family and GLM-4.5 Air"
-  },
-  {
-    "provider": "fireworks-ai",
-    "model": "Qwen/Qwen3-235B-A22B",
-    "input_price_per_million": 0.22,
-    "output_price_per_million": 0.22,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://fireworks.ai/pricing",
-    "notes": "tier: Qwen3 235B Family and GLM-4.5 Air"
-  },
-  {
-    "provider": "fireworks-ai",
     "model": "zai-org/GLM-4.5-Air",
     "input_price_per_million": 0.22,
     "output_price_per_million": 0.22,
@@ -242,6 +222,26 @@
   {
     "provider": "fireworks-ai",
     "model": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "input_price_per_million": 0.22,
+    "output_price_per_million": 0.22,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://fireworks.ai/pricing",
+    "notes": "tier: Qwen3 235B Family and GLM-4.5 Air"
+  },
+  {
+    "provider": "fireworks-ai",
+    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "input_price_per_million": 0.22,
+    "output_price_per_million": 0.22,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://fireworks.ai/pricing",
+    "notes": "tier: Qwen3 235B Family and GLM-4.5 Air"
+  },
+  {
+    "provider": "fireworks-ai",
+    "model": "Qwen/Qwen3-235B-A22B",
     "input_price_per_million": 0.22,
     "output_price_per_million": 0.22,
     "currency": "USD",
@@ -991,7 +991,7 @@
   },
   {
     "provider": "novita",
-    "model": "Qwen/Qwen3-235B-A22B",
+    "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
     "input_price_per_million": 0.3,
     "output_price_per_million": 1.5,
     "currency": "USD",
