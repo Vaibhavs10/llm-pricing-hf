@@ -37,8 +37,16 @@ def _extract_pricing_groups(html: str):
 
 
 class CohereScraper(ProviderScraper):
+    """Decode Cohere's embedded pricing JSON and map to HF CohereLabs slugs."""
+
     provider_name = "cohere"
     source_url = "https://cohere.com/pricing"
+    MODEL_NAME_MAP = {
+        "Command R": "CohereLabs/c4ai-command-r-08-2024",
+        "Command A": "CohereLabs/c4ai-command-a-03-2025",
+        "Command R7B": "CohereLabs/c4ai-command-r7b-12-2024",
+        "Embed 4": "CohereLabs/aya-expanse-32b",
+    }
 
     def fetch_pricing(self) -> Sequence[ModelPricing]:
         response = self.get(self.source_url)
@@ -49,7 +57,7 @@ class CohereScraper(ProviderScraper):
         for group in pricing_groups:
             for model in group.get("models", []):
                 model_name = model.get("modelName") or model.get("title") or model.get("description", "").split(".")[0]
-                canonical_name = self.canonicalize_model_name(model_name.strip())
+                canonical_name = self.MODEL_NAME_MAP.get(model_name.strip()) or self.canonicalize_model_name(model_name.strip())
                 if not canonical_name:
                     continue
                 for pricing in model.get("pricings", []):

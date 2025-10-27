@@ -1,7 +1,7 @@
 [
   {
     "provider": "cohere",
-    "model": "CohereLabs/command-a-translate-08-2025",
+    "model": "CohereLabs/c4ai-command-a-03-2025",
     "input_price_per_million": 2.5,
     "output_price_per_million": 10,
     "currency": "USD",
@@ -11,7 +11,7 @@
   },
   {
     "provider": "cohere",
-    "model": "CohereLabs/c4ai-command-r7b-arabic-02-2025",
+    "model": "CohereLabs/c4ai-command-r-08-2024",
     "input_price_per_million": 0.15,
     "output_price_per_million": 0.6,
     "currency": "USD",
@@ -21,9 +21,19 @@
   },
   {
     "provider": "cohere",
-    "model": "CohereLabs/c4ai-command-r7b-arabic-02-2025",
+    "model": "CohereLabs/c4ai-command-r7b-12-2024",
     "input_price_per_million": 0.0375,
     "output_price_per_million": 0.15,
+    "currency": "USD",
+    "unit": "1M tokens",
+    "source_url": "https://cohere.com/pricing",
+    "notes": null
+  },
+  {
+    "provider": "cohere",
+    "model": "CohereLabs/aya-expanse-32b",
+    "input_price_per_million": 0.12,
+    "output_price_per_million": 0.47,
     "currency": "USD",
     "unit": "1M tokens",
     "source_url": "https://cohere.com/pricing",
@@ -37,27 +47,57 @@
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: DeepSeek V3 family"
+  },
+  {
+    "provider": "fireworks-ai",
+    "model": "deepseek-ai/DeepSeek-V3.1",
+    "input_price_per_million": 0.9,
+    "output_price_per_million": 0.9,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://fireworks.ai/pricing",
+    "notes": "tier: DeepSeek V3 family"
+  },
+  {
+    "provider": "fireworks-ai",
+    "model": "deepseek-ai/DeepSeek-V3-0324",
+    "input_price_per_million": 0.9,
+    "output_price_per_million": 0.9,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://fireworks.ai/pricing",
+    "notes": "tier: DeepSeek V3 family"
+  },
+  {
+    "provider": "fireworks-ai",
+    "model": "deepseek-ai/DeepSeek-R1-0528",
+    "input_price_per_million": 1.35,
+    "output_price_per_million": 1.35,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://fireworks.ai/pricing",
+    "notes": "tier: DeepSeek R1 0528"
   },
   {
     "provider": "fireworks-ai",
     "model": "deepseek-ai/DeepSeek-R1",
     "input_price_per_million": 1.35,
-    "output_price_per_million": null,
+    "output_price_per_million": 1.35,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: DeepSeek R1 0528"
   },
   {
     "provider": "fireworks-ai",
-    "model": "zai-org/GLM-4.5-Air",
+    "model": "zai-org/GLM-4.5",
     "input_price_per_million": 0.55,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.55,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: GLM-4.5"
   },
   {
     "provider": "fireworks-ai",
@@ -67,87 +107,127 @@
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: Meta Llama 3.1 405B"
   },
   {
     "provider": "fireworks-ai",
     "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
     "input_price_per_million": 0.22,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.22,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: Meta Llama 4 Maverick (Basic)"
   },
   {
     "provider": "fireworks-ai",
     "model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
     "input_price_per_million": 0.15,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.15,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: Meta Llama 4 Scout (Basic)"
+  },
+  {
+    "provider": "fireworks-ai",
+    "model": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "input_price_per_million": 0.22,
+    "output_price_per_million": 0.22,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://fireworks.ai/pricing",
+    "notes": "tier: Qwen3 235B Family and GLM-4.5 Air"
+  },
+  {
+    "provider": "fireworks-ai",
+    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "input_price_per_million": 0.22,
+    "output_price_per_million": 0.22,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://fireworks.ai/pricing",
+    "notes": "tier: Qwen3 235B Family and GLM-4.5 Air"
+  },
+  {
+    "provider": "fireworks-ai",
+    "model": "Qwen/Qwen3-235B-A22B",
+    "input_price_per_million": 0.22,
+    "output_price_per_million": 0.22,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://fireworks.ai/pricing",
+    "notes": "tier: Qwen3 235B Family and GLM-4.5 Air"
   },
   {
     "provider": "fireworks-ai",
     "model": "zai-org/GLM-4.5-Air",
     "input_price_per_million": 0.22,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.22,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: Qwen3 235B Family and GLM-4.5 Air"
+  },
+  {
+    "provider": "fireworks-ai",
+    "model": "Qwen/Qwen3-30B-A3B",
+    "input_price_per_million": 0.15,
+    "output_price_per_million": 0.15,
+    "currency": "USD",
+    "unit": "per million tokens",
+    "source_url": "https://fireworks.ai/pricing",
+    "notes": "tier: Qwen3 30B and Qwen Coder Flash"
   },
   {
     "provider": "fireworks-ai",
     "model": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
     "input_price_per_million": 0.15,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.15,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: Qwen3 30B and Qwen Coder Flash"
   },
   {
     "provider": "fireworks-ai",
     "model": "moonshotai/Kimi-K2-Instruct",
     "input_price_per_million": 0.6,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.6,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: Kimi K2 Instruct"
   },
   {
     "provider": "fireworks-ai",
     "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
     "input_price_per_million": 0.45,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.45,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: Qwen3 Coder 480B"
   },
   {
     "provider": "fireworks-ai",
     "model": "openai/gpt-oss-120b",
     "input_price_per_million": 0.15,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.15,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: OpenAI gpt-oss-120b"
   },
   {
     "provider": "fireworks-ai",
     "model": "openai/gpt-oss-20b",
     "input_price_per_million": 0.07,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.07,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://fireworks.ai/pricing",
-    "notes": null
+    "notes": "tier: OpenAI gpt-oss-20b"
   },
   {
     "provider": "groq",
@@ -174,26 +254,6 @@
     "model": "moonshotai/Kimi-K2-Instruct-0905",
     "input_price_per_million": 1.0,
     "output_price_per_million": 3.0,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://groq.com/pricing/",
-    "notes": null
-  },
-  {
-    "provider": "groq",
-    "model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-    "input_price_per_million": 0.11,
-    "output_price_per_million": 0.34,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://groq.com/pricing/",
-    "notes": null
-  },
-  {
-    "provider": "groq",
-    "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
-    "input_price_per_million": 0.2,
-    "output_price_per_million": 0.6,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://groq.com/pricing/",
@@ -230,30 +290,10 @@
     "notes": null
   },
   {
-    "provider": "groq",
-    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
-    "input_price_per_million": 0.05,
-    "output_price_per_million": 0.08,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://groq.com/pricing/",
-    "notes": null
-  },
-  {
-    "provider": "hyperbolic",
-    "model": "Qwen/Qwen2.5-VL-72B-Instruct",
-    "input_price_per_million": 0.4,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.hyperbolic.ai/inference",
-    "notes": null
-  },
-  {
     "provider": "hyperbolic",
     "model": "Qwen/Qwen2.5-Coder-32B-Instruct",
     "input_price_per_million": 0.2,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.2,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://www.hyperbolic.ai/inference",
@@ -263,7 +303,7 @@
     "provider": "hyperbolic",
     "model": "meta-llama/Llama-3.2-3B-Instruct",
     "input_price_per_million": 0.1,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.1,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://www.hyperbolic.ai/inference",
@@ -273,7 +313,7 @@
     "provider": "hyperbolic",
     "model": "Qwen/Qwen2.5-72B-Instruct",
     "input_price_per_million": 0.4,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.4,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://www.hyperbolic.ai/inference",
@@ -281,9 +321,9 @@
   },
   {
     "provider": "hyperbolic",
-    "model": "meta-llama/Meta-Llama-3-70B-Instruct",
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
     "input_price_per_million": 0.4,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.4,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://www.hyperbolic.ai/inference",
@@ -291,49 +331,9 @@
   },
   {
     "provider": "hyperbolic",
-    "model": "NousResearch/Hermes-3-Llama-3.1-70B",
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
     "input_price_per_million": 0.4,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.hyperbolic.ai/inference",
-    "notes": null
-  },
-  {
-    "provider": "hyperbolic",
-    "model": "NousResearch/Hermes-3-Llama-3.1-70B",
-    "input_price_per_million": 4.0,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.hyperbolic.ai/inference",
-    "notes": null
-  },
-  {
-    "provider": "hyperbolic",
-    "model": "NousResearch/Hermes-3-Llama-3.1-70B",
-    "input_price_per_million": 0.4,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.hyperbolic.ai/inference",
-    "notes": null
-  },
-  {
-    "provider": "hyperbolic",
-    "model": "NousResearch/Hermes-3-Llama-3.1-70B",
-    "input_price_per_million": 0.1,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.hyperbolic.ai/inference",
-    "notes": null
-  },
-  {
-    "provider": "hyperbolic",
-    "model": "NousResearch/Hermes-3-Llama-3.1-70B",
-    "input_price_per_million": 0.1,
-    "output_price_per_million": null,
+    "output_price_per_million": 0.4,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://www.hyperbolic.ai/inference",
@@ -401,7 +401,7 @@
   },
   {
     "provider": "nebius",
-    "model": "Qwen/Qwen3-30B-A3B",
+    "model": "Qwen/Qwen3-30B-A3B-Thinking-2507",
     "input_price_per_million": 0.1,
     "output_price_per_million": 0.3,
     "currency": "USD",
@@ -431,7 +431,7 @@
   },
   {
     "provider": "nebius",
-    "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "model": "Qwen/Qwen3-30B-A3B",
     "input_price_per_million": 0.1,
     "output_price_per_million": 0.3,
     "currency": "USD",
@@ -511,7 +511,7 @@
   },
   {
     "provider": "nebius",
-    "model": "zai-org/GLM-4.5-Air",
+    "model": "zai-org/GLM-4.5",
     "input_price_per_million": 0.6,
     "output_price_per_million": 2.2,
     "currency": "USD",
@@ -551,7 +551,7 @@
   },
   {
     "provider": "nebius",
-    "model": "deepseek-ai/DeepSeek-V3",
+    "model": "deepseek-ai/DeepSeek-V3-0324",
     "input_price_per_million": 0.75,
     "output_price_per_million": 2.25,
     "currency": "USD",
@@ -561,7 +561,7 @@
   },
   {
     "provider": "nebius",
-    "model": "deepseek-ai/DeepSeek-V3",
+    "model": "deepseek-ai/DeepSeek-V3-0324",
     "input_price_per_million": 0.5,
     "output_price_per_million": 1.5,
     "currency": "USD",
@@ -701,17 +701,7 @@
   },
   {
     "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-V3.2-Exp",
-    "input_price_per_million": 0.03,
-    "output_price_per_million": 0.03,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-V3.1",
+    "model": "deepseek-ai/DeepSeek-V3.1-Terminus",
     "input_price_per_million": 0.27,
     "output_price_per_million": 1.0,
     "currency": "USD",
@@ -731,7 +721,7 @@
   },
   {
     "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-V3",
+    "model": "deepseek-ai/DeepSeek-V3-0324",
     "input_price_per_million": 0.27,
     "output_price_per_million": 1.12,
     "currency": "USD",
@@ -741,7 +731,7 @@
   },
   {
     "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-R1",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
     "input_price_per_million": 0.15,
     "output_price_per_million": 0.15,
     "currency": "USD",
@@ -751,7 +741,7 @@
   },
   {
     "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-R1",
+    "model": "deepseek-ai/DeepSeek-R1-0528",
     "input_price_per_million": 0.7,
     "output_price_per_million": 2.5,
     "currency": "USD",
@@ -761,7 +751,7 @@
   },
   {
     "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-R1",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
     "input_price_per_million": 0.3,
     "output_price_per_million": 0.3,
     "currency": "USD",
@@ -771,7 +761,7 @@
   },
   {
     "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-R1",
+    "model": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
     "input_price_per_million": 0.06,
     "output_price_per_million": 0.09,
     "currency": "USD",
@@ -781,7 +771,7 @@
   },
   {
     "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-R1",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
     "input_price_per_million": 0.8,
     "output_price_per_million": 0.8,
     "currency": "USD",
@@ -941,7 +931,7 @@
   },
   {
     "provider": "novita",
-    "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+    "model": "Qwen/Qwen3-30B-A3B",
     "input_price_per_million": 0.07,
     "output_price_per_million": 0.27,
     "currency": "USD",
@@ -951,7 +941,7 @@
   },
   {
     "provider": "novita",
-    "model": "Qwen/Qwen3-235B-A22B",
+    "model": "Qwen/Qwen3-235B-A22B-Thinking-2507",
     "input_price_per_million": 0.3,
     "output_price_per_million": 3.0,
     "currency": "USD",
@@ -964,16 +954,6 @@
     "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
     "input_price_per_million": 0.09,
     "output_price_per_million": 0.58,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "Qwen/Qwen2.5-72B-Instruct",
-    "input_price_per_million": 0.38,
-    "output_price_per_million": 0.4,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://novita.ai/pricing",
@@ -1051,76 +1031,6 @@
   },
   {
     "provider": "novita",
-    "model": "Qwen/Qwen3-VL-8B-Instruct",
-    "input_price_per_million": 0.035,
-    "output_price_per_million": 0.138,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "Qwen/Qwen2.5-72B-Instruct",
-    "input_price_per_million": 0.07,
-    "output_price_per_million": 0.07,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "baidu/ERNIE-4.5-21B-A3B-PT",
-    "input_price_per_million": 0.07,
-    "output_price_per_million": 0.28,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-    "input_price_per_million": 0.42,
-    "output_price_per_million": 1.25,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "baidu/ERNIE-4.5-300B-A47B-Base-PT",
-    "input_price_per_million": 0.28,
-    "output_price_per_million": 1.1,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "baidu/ERNIE-4.5-VL-28B-A3B-PT",
-    "input_price_per_million": 0.14,
-    "output_price_per_million": 0.56,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "baidu/ERNIE-4.5-21B-A3B-PT",
-    "input_price_per_million": 0.07,
-    "output_price_per_million": 0.28,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
     "model": "zai-org/GLM-4.6",
     "input_price_per_million": 0.6,
     "output_price_per_million": 2.2,
@@ -1131,7 +1041,7 @@
   },
   {
     "provider": "novita",
-    "model": "zai-org/GLM-4.5-Air",
+    "model": "zai-org/GLM-4.5",
     "input_price_per_million": 0.6,
     "output_price_per_million": 2.2,
     "currency": "USD",
@@ -1141,7 +1051,7 @@
   },
   {
     "provider": "novita",
-    "model": "zai-org/GLM-4.5",
+    "model": "zai-org/GLM-4.5V",
     "input_price_per_million": 0.6,
     "output_price_per_million": 1.8,
     "currency": "USD",
@@ -1171,29 +1081,9 @@
   },
   {
     "provider": "novita",
-    "model": "Sao10K/L3-8B-Lunaris-v1",
-    "input_price_per_million": 0.05,
-    "output_price_per_million": 0.05,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
     "model": "Sao10K/L3-8B-Stheno-v3.2",
     "input_price_per_million": 0.05,
     "output_price_per_million": 0.05,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "Sao10K/L3-70B-Euryale-v2.1",
-    "input_price_per_million": 1.48,
-    "output_price_per_million": 1.48,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://novita.ai/pricing",
@@ -1231,16 +1121,6 @@
   },
   {
     "provider": "novita",
-    "model": "MiniMaxAI/MiniMax-M1-80k",
-    "input_price_per_million": 0.3,
-    "output_price_per_million": 1.2,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
     "model": "deepseek-ai/DeepSeek-V3.2-Exp",
     "input_price_per_million": 0.27,
     "output_price_per_million": 0.41,
@@ -1261,7 +1141,7 @@
   },
   {
     "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-V3.1",
+    "model": "deepseek-ai/DeepSeek-V3.1-Terminus",
     "input_price_per_million": 0.27,
     "output_price_per_million": 1.0,
     "currency": "USD",
@@ -1281,7 +1161,7 @@
   },
   {
     "provider": "novita",
-    "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+    "model": "Qwen/Qwen3-30B-A3B",
     "input_price_per_million": 0.07,
     "output_price_per_million": 0.27,
     "currency": "USD",
@@ -1301,7 +1181,7 @@
   },
   {
     "provider": "novita",
-    "model": "moonshotai/Kimi-K2-Instruct-0905",
+    "model": "moonshotai/Kimi-K2-Instruct",
     "input_price_per_million": 0.57,
     "output_price_per_million": 2.3,
     "currency": "USD",
@@ -1311,7 +1191,7 @@
   },
   {
     "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-V3",
+    "model": "deepseek-ai/DeepSeek-V3-0324",
     "input_price_per_million": 0.27,
     "output_price_per_million": 1.12,
     "currency": "USD",
@@ -1321,7 +1201,7 @@
   },
   {
     "provider": "novita",
-    "model": "zai-org/GLM-4.5-Air",
+    "model": "zai-org/GLM-4.5",
     "input_price_per_million": 0.6,
     "output_price_per_million": 2.2,
     "currency": "USD",
@@ -1331,7 +1211,7 @@
   },
   {
     "provider": "novita",
-    "model": "Qwen/Qwen3-235B-A22B",
+    "model": "Qwen/Qwen3-235B-A22B-Thinking-2507",
     "input_price_per_million": 0.3,
     "output_price_per_million": 3.0,
     "currency": "USD",
@@ -1341,7 +1221,7 @@
   },
   {
     "provider": "novita",
-    "model": "zai-org/GLM-4.5",
+    "model": "zai-org/GLM-4.5V",
     "input_price_per_million": 0.6,
     "output_price_per_million": 1.8,
     "currency": "USD",
@@ -1371,7 +1251,7 @@
   },
   {
     "provider": "novita",
-    "model": "deepseek-ai/DeepSeek-R1",
+    "model": "deepseek-ai/DeepSeek-R1-0528",
     "input_price_per_million": 0.7,
     "output_price_per_million": 2.5,
     "currency": "USD",
@@ -1404,36 +1284,6 @@
     "model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
     "input_price_per_million": 0.1,
     "output_price_per_million": 0.5,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "baidu/ERNIE-4.5-21B-A3B-PT",
-    "input_price_per_million": 0.07,
-    "output_price_per_million": 0.28,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-    "input_price_per_million": 0.42,
-    "output_price_per_million": 1.25,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "baidu/ERNIE-4.5-300B-A47B-Base-PT",
-    "input_price_per_million": 0.28,
-    "output_price_per_million": 1.1,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://novita.ai/pricing",
@@ -1490,26 +1340,6 @@
     "notes": null
   },
   {
-    "provider": "novita",
-    "model": "baidu/ERNIE-4.5-VL-28B-A3B-PT",
-    "input_price_per_million": 0.14,
-    "output_price_per_million": 0.56,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "novita",
-    "model": "baidu/ERNIE-4.5-21B-A3B-PT",
-    "input_price_per_million": 0.07,
-    "output_price_per_million": 0.28,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://novita.ai/pricing",
-    "notes": null
-  },
-  {
     "provider": "nscale",
     "model": "openai/gpt-oss-120b",
     "input_price_per_million": 0.1,
@@ -1528,26 +1358,6 @@
     "unit": "per million tokens",
     "source_url": "https://www.nscale.com/product/serverless",
     "notes": "provider: openai; category: Text Generation; original label: GPT OSS 20B"
-  },
-  {
-    "provider": "nscale",
-    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
-    "input_price_per_million": 0.2,
-    "output_price_per_million": 0.6,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: Qwen; category: Text Generation; original label: Qwen 3 235B A22B Instruct 2507"
-  },
-  {
-    "provider": "nscale",
-    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
-    "input_price_per_million": 0.2,
-    "output_price_per_million": 0.6,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: Qwen; category: Text Generation; original label: Qwen 3 235B A22B"
   },
   {
     "provider": "nscale",
@@ -1571,36 +1381,6 @@
   },
   {
     "provider": "nscale",
-    "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
-    "input_price_per_million": 0.01,
-    "output_price_per_million": 0.03,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: Qwen; category: Text Generation; original label: Qwen 2.5 Coder 3B Instruct"
-  },
-  {
-    "provider": "nscale",
-    "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
-    "input_price_per_million": 0.01,
-    "output_price_per_million": 0.03,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: Qwen; category: Text Generation; original label: Qwen 2.5 Coder 7B Instruct"
-  },
-  {
-    "provider": "nscale",
-    "model": "Qwen/Qwen2.5-Coder-32B-Instruct",
-    "input_price_per_million": 0.06,
-    "output_price_per_million": 0.2,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: Qwen; category: Text Generation; original label: Qwen 2.5 Coder 32B Instruct"
-  },
-  {
-    "provider": "nscale",
     "model": "Qwen/QwQ-32B",
     "input_price_per_million": 0.18,
     "output_price_per_million": 0.2,
@@ -1620,126 +1400,6 @@
     "notes": "provider: Meta; category: Text Generation; original label: Llama 4 Scout 17B 16E Instruct"
   },
   {
-    "provider": "nscale",
-    "model": "meta-llama/Llama-3.3-70B-Instruct",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: Meta; category: Text Generation; original label: Llama 3.3 70B Instruct"
-  },
-  {
-    "provider": "nscale",
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: Meta; category: Image-Text-to-Text; original label: Llama 3.2 11B Vision Instruct"
-  },
-  {
-    "provider": "nscale",
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: Meta; category: Text Generation; original label: Llama 3.1 8B Instruct"
-  },
-  {
-    "provider": "nscale",
-    "model": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: DeepSeek; category: Text Generation; original label: DeepSeek R1 Distill Llama 70B"
-  },
-  {
-    "provider": "nscale",
-    "model": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: DeepSeek; category: Text Generation; original label: DeepSeek R1 Distill Llama 8B"
-  },
-  {
-    "provider": "nscale",
-    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: DeepSeek; category: Text Generation; original label: DeepSeek R1 Distill Qwen 32B"
-  },
-  {
-    "provider": "nscale",
-    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: DeepSeek; category: Text Generation; original label: DeepSeek R1 Distill Qwen 14B"
-  },
-  {
-    "provider": "nscale",
-    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: DeepSeek; category: Text Generation; original label: DeepSeek R1 Distill Qwen 7B (Math)"
-  },
-  {
-    "provider": "nscale",
-    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: DeepSeek; category: Text Generation; original label: DeepSeek R1 Distill Qwen 1.5B (Math)"
-  },
-  {
-    "provider": "nscale",
-    "model": "mistralai/Mixtral-8x22B-Instruct-v0.1",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: Mistral AI; category: Text Generation; original label: Mixtral 8x22B Instruct v0.1"
-  },
-  {
-    "provider": "nscale",
-    "model": "Qwen/Qwen3-8B",
-    "input_price_per_million": null,
-    "output_price_per_million": null,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.nscale.com/product/serverless",
-    "notes": "provider: Qwen; category: Embeddings; original label: Qwen3 Embedding 8B"
-  },
-  {
-    "provider": "publicai",
-    "model": "swiss-ai/Apertus-8B-Instruct-2509",
-    "input_price_per_million": 0.04,
-    "output_price_per_million": 0.1,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.inference.net/pricing",
-    "notes": "quantization: BF16"
-  },
-  {
     "provider": "sambanova",
     "model": "meta-llama/Llama-3.3-70B-Instruct",
     "input_price_per_million": 0.6,
@@ -1758,16 +1418,6 @@
     "unit": "per million tokens",
     "source_url": "https://cloud.sambanova.ai/pricing",
     "notes": "original label: Llama 3.3 70B"
-  },
-  {
-    "provider": "sambanova",
-    "model": "deepseek-ai/DeepSeek-V3-0324",
-    "input_price_per_million": 3.0,
-    "output_price_per_million": 4.5,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://cloud.sambanova.ai/pricing",
-    "notes": "original label: deepseek-ai/DeepSeek-V3.1"
   },
   {
     "provider": "sambanova",
@@ -1811,13 +1461,13 @@
   },
   {
     "provider": "sambanova",
-    "model": "deepseek-ai/DeepSeek-R1",
+    "model": "deepseek-ai/DeepSeek-R1-0528",
     "input_price_per_million": 5.0,
     "output_price_per_million": 7.0,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://cloud.sambanova.ai/pricing",
-    "notes": "original label: deepseek-ai/DeepSeek-R1-0528"
+    "notes": null
   },
   {
     "provider": "sambanova",
@@ -1831,32 +1481,12 @@
   },
   {
     "provider": "sambanova",
-    "model": "deepseek-ai/DeepSeek-R1",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
     "input_price_per_million": 0.7,
     "output_price_per_million": 1.4,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://cloud.sambanova.ai/pricing",
-    "notes": "original label: deepseek-ai/DeepSeek-R1-Distill-Llama-70B"
-  },
-  {
-    "provider": "together",
-    "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-    "input_price_per_million": 0.27,
-    "output_price_per_million": 0.85,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-    "input_price_per_million": 0.18,
-    "output_price_per_million": 0.59,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
     "notes": null
   },
   {
@@ -1881,46 +1511,6 @@
   },
   {
     "provider": "together",
-    "model": "meta-llama/Llama-3.2-3B-Instruct",
-    "input_price_per_million": 3.5,
-    "output_price_per_million": 3.5,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "meta-llama/Llama-3.3-70B-Instruct",
-    "input_price_per_million": 0.88,
-    "output_price_per_million": 0.88,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
-    "input_price_per_million": 0.18,
-    "output_price_per_million": 0.18,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
-    "input_price_per_million": 0.1,
-    "output_price_per_million": 0.1,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
     "model": "meta-llama/Llama-3.3-70B-Instruct",
     "input_price_per_million": 0.88,
     "output_price_per_million": 0.88,
@@ -1941,9 +1531,9 @@
   },
   {
     "provider": "together",
-    "model": "meta-llama/Llama-3.2-3B-Instruct",
-    "input_price_per_million": 0.9,
-    "output_price_per_million": 0.9,
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
+    "input_price_per_million": 0.88,
+    "output_price_per_million": 0.88,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://www.together.ai/pricing",
@@ -2072,16 +1662,6 @@
   {
     "provider": "together",
     "model": "Qwen/Qwen2.5-72B-Instruct",
-    "input_price_per_million": 1.2,
-    "output_price_per_million": 1.2,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "Qwen/Qwen2.5-72B-Instruct",
     "input_price_per_million": 1.95,
     "output_price_per_million": 8.0,
     "currency": "USD",
@@ -2121,16 +1701,6 @@
   },
   {
     "provider": "together",
-    "model": "zai-org/GLM-4.5-Air-FP8",
-    "input_price_per_million": 0.2,
-    "output_price_per_million": 1.1,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
     "model": "moonshotai/Kimi-K2-Instruct",
     "input_price_per_million": 1.0,
     "output_price_per_million": 3.0,
@@ -2144,36 +1714,6 @@
     "model": "moonshotai/Kimi-K2-Instruct-0905",
     "input_price_per_million": 1.0,
     "output_price_per_million": 3.0,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "mistralai/Mistral-7B-Instruct-v0.3",
-    "input_price_per_million": 0.2,
-    "output_price_per_million": 0.2,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "mistralai/Mistral-7B-Instruct-v0.3",
-    "input_price_per_million": 0.2,
-    "output_price_per_million": 0.2,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "mistralai/Mistral-7B-Instruct-v0.3",
-    "input_price_per_million": 0.8,
-    "output_price_per_million": 0.8,
     "currency": "USD",
     "unit": "per million tokens",
     "source_url": "https://www.together.ai/pricing",
@@ -2210,46 +1750,6 @@
     "notes": null
   },
   {
-    "provider": "together",
-    "model": "deepcogito/cogito-v2-preview-llama-109B-MoE",
-    "input_price_per_million": 0.18,
-    "output_price_per_million": 0.59,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "deepcogito/cogito-v2-preview-llama-405B",
-    "input_price_per_million": 3.5,
-    "output_price_per_million": 3.5,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "deepcogito/cogito-v2-preview-deepseek-671B-MoE",
-    "input_price_per_million": 1.25,
-    "output_price_per_million": 1.25,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
-    "provider": "together",
-    "model": "deepcogito/cogito-v2-preview-llama-70B",
-    "input_price_per_million": 0.88,
-    "output_price_per_million": 0.88,
-    "currency": "USD",
-    "unit": "per million tokens",
-    "source_url": "https://www.together.ai/pricing",
-    "notes": null
-  },
-  {
     "provider": "zhipu",
     "model": "zai-org/GLM-4.6",
     "input_price_per_million": 0.6,
@@ -2261,7 +1761,7 @@
   },
   {
     "provider": "zhipu",
-    "model": "zai-org/GLM-4.6",
+    "model": "zai-org/GLM-4.6-FP8",
     "input_price_per_million": 0.6,
     "output_price_per_million": 2.2,
     "currency": "USD",
@@ -2271,7 +1771,7 @@
   },
   {
     "provider": "zhipu",
-    "model": "zai-org/GLM-4.5-Air",
+    "model": "zai-org/GLM-4.5",
     "input_price_per_million": 0.6,
     "output_price_per_million": 2.2,
     "currency": "USD",
@@ -2281,7 +1781,7 @@
   },
   {
     "provider": "zhipu",
-    "model": "zai-org/GLM-4.5",
+    "model": "zai-org/GLM-4.5V",
     "input_price_per_million": 0.6,
     "output_price_per_million": 1.8,
     "currency": "USD",
@@ -2291,7 +1791,7 @@
   },
   {
     "provider": "zhipu",
-    "model": "zai-org/GLM-4.5",
+    "model": "zai-org/GLM-4.5V-FP8",
     "input_price_per_million": 0.6,
     "output_price_per_million": 1.8,
     "currency": "USD",

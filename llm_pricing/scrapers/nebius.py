@@ -10,6 +10,7 @@ from .base import ModelPricing, ProviderScraper
 
 
 class NebiusScraper(ProviderScraper):
+    """Extract pricing from Nebius' embedded Apollo state for AI Studio."""
     provider_name = "nebius"
     source_url = "https://nebius.com/prices-ai-studio"
 

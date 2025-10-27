@@ -16,6 +16,7 @@ PRICE_PATTERN = re.compile(
 
 
 class NscaleScraper(ProviderScraper):
+    """Pair the serverless pricing legend with stats rows to capture per-model fees."""
     provider_name = "nscale"
     source_url = "https://www.nscale.com/product/serverless"
 
@@ -74,6 +75,9 @@ class NscaleScraper(ProviderScraper):
                 notes = f"{notes}; original label: {model_name}"
             elif canonical_name != model_name:
                 notes = f"original label: {model_name}"
+
+            if input_price is None and output_price is None:
+                continue
 
             results.append(
                 ModelPricing(

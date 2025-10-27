@@ -9,6 +9,7 @@ from .base import ModelPricing, ProviderScraper
 
 
 class NovitaScraper(ProviderScraper):
+    """Parse Novita's pricing tables and retain only HF-listed models."""
     provider_name = "novita"
     source_url = "https://novita.ai/pricing"
 

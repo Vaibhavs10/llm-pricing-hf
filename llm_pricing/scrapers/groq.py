@@ -13,6 +13,7 @@ VALUE_PATTERN = re.compile(r"\$?\s*(\d+(?:\.\d+)?)")
 
 
 class GroqScraper(ProviderScraper):
+    """Scrape Groq's pricing tables and align each row with HF model slugs."""
     provider_name = "groq"
     source_url = "https://groq.com/pricing/"
 

@@ -24,6 +24,12 @@ class ModelPricing:
     source_url: str
     notes: Optional[str] = None
 
+    def __post_init__(self):
+        if self.input_price_per_million is None and self.output_price_per_million is not None:
+            object.__setattr__(self, "input_price_per_million", self.output_price_per_million)
+        if self.output_price_per_million is None and self.input_price_per_million is not None:
+            object.__setattr__(self, "output_price_per_million", self.input_price_per_million)
+
 
 class ProviderScraper(abc.ABC):
     """

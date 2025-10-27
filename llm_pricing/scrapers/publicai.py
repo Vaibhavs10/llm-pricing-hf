@@ -9,6 +9,7 @@ from .base import ModelPricing, ProviderScraper
 
 
 class PublicAIScraper(ProviderScraper):
+    """Scrape inference.net pricing table and map quantized variants to HF models."""
     provider_name = "publicai"
     source_url = "https://www.inference.net/pricing"
 

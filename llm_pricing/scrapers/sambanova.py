@@ -7,6 +7,7 @@ from .base import ModelPricing, ProviderScraper
 
 
 class SambaNovaScraper(ProviderScraper):
+    """Call the public SambaNova Cloud pricing API and align with HF slugs."""
     provider_name = "sambanova"
     source_url = "https://cloud.sambanova.ai/pricing"
     api_url = "https://cloud.sambanova.ai/api/pricing"

@@ -9,6 +9,7 @@ from .base import ModelPricing, ProviderScraper
 
 
 class HyperbolicScraper(ProviderScraper):
+    """Read the carousel pricing cards from hyperbolic.ai and map to HF slugs."""
     provider_name = "hyperbolic"
     source_url = "https://www.hyperbolic.ai/inference"
 

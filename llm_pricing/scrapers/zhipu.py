@@ -19,6 +19,7 @@ DOC_ALIAS_MAP = {
 
 
 class ZhipuScraper(ProviderScraper):
+    """Read Zhipu's Mintlify pricing table and map entries to HF zai-org slugs."""
     provider_name = "zhipu"
     source_url = "https://docs.z.ai/guides/overview/pricing"
 

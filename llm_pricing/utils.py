@@ -19,6 +19,7 @@ HF_PROVIDER_ALIASES = {
     "zhipu": "zai-org",
     "hf-inference": "hf-inference",
 }
+OPTIONAL_MATCH_TOKENS = {"instruct", "preview", "turbo", "basic"}
 
 
 def iter_next_data(html: str) -> Iterator[Any]:
@@ -144,37 +145,77 @@ def _build_provider_canonical_data(provider: str) -> list[tuple[str, str, str, s
 _CANONICAL_CACHE: dict[str, list[tuple[str, str, str, set[str]]]] = {}
 
 
-def canonicalize_model_name(provider: str, raw_name: str) -> str | None:
-    provider_key = HF_PROVIDER_ALIASES.get((provider or "").lower(), (provider or "").lower())
+def _ensure_canonical_cache(provider: str) -> list[tuple[str, str, str, set[str]]]:
+    provider_key = HF_PROVIDER_ALIASES.get(provider.lower(), provider.lower())
     if provider_key not in _CANONICAL_CACHE:
         _CANONICAL_CACHE[provider_key] = _build_provider_canonical_data(provider_key)
+    return _CANONICAL_CACHE.get(provider_key, [])
 
-    canonical_options = _CANONICAL_CACHE.get(provider_key, [])
-    if not canonical_options:
+
+def _score_match(norm_raw: str, raw_tokens: set[str], norm_full: str, norm_last: str, token_set: set[str]) -> float:
+    if not norm_raw or not token_set:
+        return 0.0
+    if norm_raw == norm_full or norm_raw == norm_last:
+        return 1.0
+
+    score = 0.0
+    if norm_full in norm_raw or norm_raw in norm_full or norm_last in norm_raw or norm_raw in norm_last:
+        score = max(score, 0.9)
+
+    numeric_tokens = {tok for tok in token_set if any(ch.isdigit() for ch in tok)}
+    if numeric_tokens and not numeric_tokens <= raw_tokens:
+        return 0.0
+
+    missing_tokens = token_set - raw_tokens
+    non_optional_missing = {
+        tok for tok in missing_tokens if tok not in OPTIONAL_MATCH_TOKENS and not any(ch.isdigit() for ch in tok)
+    }
+    if non_optional_missing:
+        return 0.0
+
+    if raw_tokens:
+        intersection = len(raw_tokens & token_set)
+        if intersection:
+            token_score = intersection / max(len(raw_tokens), len(token_set))
+            score = max(score, token_score)
+
+    return score
+
+
+def canonicalize_model_name(provider: str, raw_name: str) -> str | None:
+    candidates = _ensure_canonical_cache(provider or "")
+    if not candidates:
         return None
 
     norm_raw = _normalize_name(raw_name)
     if not norm_raw:
         return None
-
     raw_tokens = set(norm_raw.split())
-    best_match: str | None = None
+
+    best_model: str | None = None
     best_score = 0.0
+    for model, norm_full, norm_last, token_set in candidates:
+        score = _score_match(norm_raw, raw_tokens, norm_full, norm_last, token_set)
+        if score > best_score:
+            best_score = score
+            best_model = model
 
-    for model, norm_full, norm_last, token_set in canonical_options:
-        if norm_raw == norm_full or norm_raw == norm_last:
-            return model
-        if norm_raw in norm_full or norm_raw in norm_last:
-            return model
-        if norm_full in norm_raw or norm_last in norm_raw:
-            return model
-        if raw_tokens and token_set:
-            intersection = len(raw_tokens & token_set)
-            if not intersection:
-                continue
-            score = intersection / len(raw_tokens)
-            if score > best_score and score >= 0.5:
-                best_score = score
-                best_match = model
+    return best_model if best_score >= 0.5 else None
 
-    return best_match
+
+def match_hf_models(provider: str, raw_name: str, min_score: float = 0.5) -> list[str]:
+    candidates = _ensure_canonical_cache(provider or "")
+    if not candidates:
+        return []
+
+    norm_raw = _normalize_name(raw_name)
+    if not norm_raw:
+        return []
+    raw_tokens = set(norm_raw.split())
+
+    matches: list[str] = []
+    for model, norm_full, norm_last, token_set in candidates:
+        score = _score_match(norm_raw, raw_tokens, norm_full, norm_last, token_set)
+        if score >= min_score:
+            matches.append(model)
+    return matches

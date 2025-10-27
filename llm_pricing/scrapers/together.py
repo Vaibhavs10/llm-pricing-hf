@@ -9,6 +9,7 @@ from .base import ModelPricing, ProviderScraper
 
 
 class TogetherScraper(ProviderScraper):
+    """Parse Together's pricing tables for per-model token rates."""
     provider_name = "together"
     source_url = "https://www.together.ai/pricing"
 
