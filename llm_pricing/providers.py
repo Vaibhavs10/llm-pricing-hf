@@ -13,4 +13,5 @@ from .scrapers import (  # noqa: F401
     publicai,
     sambanova,
     together,
+    zhipu,
 )

@@ -55,7 +55,7 @@ Each scraper uses static HTML parsing or embedded JSON extraction tailored to th
 
 ### TODO
 
-Scrapers still need to be implemented for: Cerebras, HF Inference Infrastructure, Nscale, SambaNova, Scaleway, and Zhipu (zai-org).
+Scrapers still need to be implemented for: Cerebras, HF Inference Infrastructure, and Scaleway.
 
 ## Extending
 
